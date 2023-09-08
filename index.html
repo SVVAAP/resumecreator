@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Creator</title>
+    <style>/* Reset some default browser styles */
+        body, h1, h2, p, label, input, textarea, button {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        header h1 {
+            font-size: 24px;
+        }
+        
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        form {
+            margin-top: 10px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: #fff;
+        }
+        
+        /* Style the resume preview area */
+        #preview {
+            display: none;
+        }
+        
+        #resume-preview {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Create Your Resume</h1>
+    </header>
+    
+    <section id="personal-info">
+        <h2>Personal Information</h2>
+        <form>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4"></textarea>
+        </form>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <form>
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree">
+            
+            <label for="university">University:</label>
+            <input type="text" id="university" name="university">
+            
+            <label for="grad-year">Graduation Year:</label>
+            <input type="text" id="grad-year" name="grad-year">
+        </form>
+    </section>
+
+    <!-- Additional sections for work experience, skills, etc. can be added similarly -->
+
+    <section id="generate-resume">
+        <button id="generate-button">Generate Resume</button>
+    </section>
+
+    <section id="preview">
+        <h2>Preview Your Resume</h2>
+        <div id="resume-preview">
+            <!-- The generated resume content will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Resume Creator</p>
+    </footer>
+</body>
+</html>
